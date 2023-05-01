@@ -19,7 +19,7 @@
     if($res->num_rows > 0){
         #cek apabila "users" maka di print
         while($row=$res->fetch_assoc()){
-        
+            $hitung = $hitung+1;
             echo "ID: ". $row["ID"]. " | Nama: ". $row["Nama"]. " | Alamat: ". $row["Alamat"]. " | Jabatan: ". $row["Jabatan"]. "<br>";
         }
     }
@@ -27,5 +27,7 @@
     else{
         echo "NULL";
     }
+    echo "Total data: ". "$hitung";
+
     $conn->close();
 ?>
